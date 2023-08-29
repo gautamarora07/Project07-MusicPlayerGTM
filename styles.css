@@ -1,0 +1,383 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+  
+*, ::after, ::before
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+/*
+div
+{
+    border: 0.5px solid red;
+}
+*/
+body
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, grey, #000);
+    
+
+}
+
+
+/* input[type=range]:focus {outline: none;}
+input[type=range]::-webkit-slider-thumb:active {cursor: -webkit-grabbing;}
+input[type=range]::-webkit-progress-bar
+{
+    -webkit-appearance: none ;
+    appearance: none;
+    background: red;
+
+}    */
+
+.container
+{
+    height: 60vh;
+    width: 23vw;
+    border: none;
+    background-color: #ffffff99;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 20px rgb(29, 28, 28);
+    position: relative;
+    padding-bottom : 20px;
+    overflow: hidden;
+}
+
+i{
+    font-size: 1.5rem;
+    color: #EEEEEE;
+}
+
+
+button
+{
+    
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+   
+}
+
+button:hover{
+    box-shadow: 0 0 10px #201f1f9f;
+}
+/*------------------------------------TOP SECTION-------------------------------------------*/
+.top
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.tbtn
+{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #000;
+}
+
+
+.tbtn:active{
+    background-color: #0093d5	;   
+}
+.options
+{
+    visibility: hidden;
+    background: rgb(28,28,28, 0.1);
+    transform : translateX(-100px);
+    display: flex;
+    align-items: center;
+    border-radius: 25px;   
+    padding: 5px;
+}
+
+.obtn
+{
+    height: 1.8rem;
+    width: 1.8rem;
+    /*box-shadow: 1px 2px 5px #ffffff56;*/
+    background:none;
+    padding-top: 3px;
+    margin: auto 0.3rem;
+    font-size: 1rem;
+}
+
+.obtn i{
+    font-size: 1rem;
+}
+
+/*------------------------------------SONG COVER---------------------------------------------*/
+.songCover
+{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+.songCover img
+{
+    text-shadow: 2px 2px 10px #000000;
+    box-shadow: 2px 2px 10px #000000;
+
+    border-radius: 50%;
+    height: 9rem;
+    width: 9rem;
+    object-fit: cover;
+}
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  
+
+/*-------------------------------------DETAILS SECTION-----------------------------------------*/
+.songDetails
+{
+    text-align: center;
+    color: white;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+    visibility: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+#songName
+{
+    font-size: 1.3rem;
+    /*font-weight : 500;*/
+}
+
+#artistName
+{
+    font-size: 0.8rem;
+}
+
+/*--------------------------------------CONTROL SECTION------------------------------------------*/
+.control .progressBar, .control .control_btns
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progressBar
+{
+    padding: 0.3rem;
+    margin-bottom: 0.1rem;
+}
+
+input[type="range"]
+{   -webkit-appearance: none;
+    appearance: none;
+    overflow: hidden;
+
+    outline : none;
+       background-color: #58585a;
+    border-radius: 20px;
+    height: 10px;
+    width: 70% ;}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 10px;
+    width: 10px;
+    
+    background: #fff;
+
+    border-radius: 50%;
+    
+    box-shadow: -405px 0 0 400px #0093d5; }
+
+input[type="range"]::-webkit-slider-thumb:hover
+{
+    
+    background: #0093d5;
+}
+
+/*---------------------------------*/
+
+  
+/*---------------------------------*/
+
+.control_btns  .ctrlBtn
+{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #0093d5;
+    margin: 0.5rem;
+}
+
+.control_btns  .ctrlBtn
+{
+    height: 2.5rem;
+    width: 2.5rem;
+    background : none;
+    margin: 0.5rem;
+}
+
+
+.control_btns  .ctrlBtn i
+{
+    font-size: 2.5rem;
+    text-align: center;
+    color: #000;
+}
+
+#play
+{
+    height:4rem;
+    width: 4rem;
+    background-color: #0093d5;
+
+}
+
+#play i{
+    font-size: 3rem;
+    padding-left: 1.5px;
+    color: white;
+}
+
+/*---------------------------------PLAYLIST-----------------------------------*/
+.playlist
+{    
+    position: absolute;
+    top : 1%;
+    left: 1.2%;
+    width: 97.9%;
+    height : 98%;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 5px 10px 10px grey;
+    z-index: 1;
+    border: 5px solid black;
+    border-radius: 25px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    overflow-y: auto;
+}
+
+.playlist::-webkit-scrollbar
+{
+    height: 0;
+    width: 0;
+    appearance: none;
+}
+
+#cross
+{
+   margin : 0.2rem;
+    text-align: right;
+    width: 95%;
+    margin-bottom: 0.3rem;
+    
+}
+
+#crossBtn
+{
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    
+}
+
+#crossBtn i
+{
+    color: #fff;
+    font-size: 1.5rem;
+    padding-top: 4px;
+
+}
+
+.playlist ul 
+{
+    width : inherit;
+    text-align:center;
+    display : flex;
+    flex-direction : column;
+    
+}
+
+.playlist ul li
+{
+    list-style : none;
+  
+}
+ .pSong
+{
+    width: 80%;
+    height: auto;
+    background:transparent;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    padding :0.2rem;
+    margin : auto;
+    margin-bottom : 0.5rem;
+    border-radius:8px ;
+    
+    border: 1px solid white;
+}
+
+/* .pSong:last-child{
+    border-bottom: 0;
+} */
+
+.playlist .pSong:hover{
+    background-color: #0093d5;
+    box-shadow : 0 2px 0 #000;
+    border-radius: 10px ;
+    border-bottom: 0;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.pSong:active{
+    background-color: #000000;
+    color: #0093d5;
+}
+.psName
+{
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+.paName
+{
+    font-size: 0.7rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+
+
+@media (max-width : 400px)
+{
+    .container{
+        height: 70vh;
+         width: 80vw;
+    }
+}

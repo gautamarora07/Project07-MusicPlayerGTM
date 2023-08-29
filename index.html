@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlayer_GTM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="top">
+           <button class="btn tbtn" id="tl_btn" onclick="loadOptions()"><i class=' bx bxs-chevrons-right' id="tl_icon"></i></button>
+
+           <div class="options" id="opt">
+                <button class="btn obtn"><i class='bx bxs-volume' id="vol"></i></button>
+                <button class="btn obtn"><i class='bx bx-shuffle' id="shuffle"></i></button>
+                <button class="btn obtn"><i class='bx bxs-volume-mute' id=" mute"></i></button>
+           </div>
+
+            <button class="btn tbtn" id="tr_btn" onclick="showPlaylist()"><i class=' bx bx-menu-alt-right'></i></button>
+        </div>
+
+        <div class="songCover">
+            <img src="music.gif" id="cover_img" alt="Song Cover Image">
+        </div>
+
+        <div class="songDetails" id="details">
+            <p id="songName">Song Name</p>
+            <p id="artistName">Artist Name </p>
+        </div>
+
+        <div class="control">
+
+            <div class="progressBar">
+                <input type="range" min="0" value="0" max="100" class="range-input" id="progress">
+            </div>     
+
+            <div class="control_btns">
+                <button class="btn ctrlBtn" onclick="prevSong()" ><i class='bx bx-skip-previous' ></i></button>
+                <button class="btn ctrlBtn" id="play" onclick="playpauseSong()"><i class='bx bx-play' ></i></button>
+                <button class="btn ctrlBtn" onclick="nextSong()" ><i class='bx bx-skip-next' ></i></button>
+            </div>       
+
+        </div>
+
+        <div class="playlist" id="playlist">
+
+            <div id="cross"> 
+                <button id="crossBtn" onclick="hidePlaylist()"><i class='bx bx-x'></i></button>
+            </div>
+            <ul id="list">
+                <!-- <li>
+                    <div class="pSong">
+                        <p id="psName">Song 1</p>
+                        <p id="paName">Arijit Singh</p>
+                    </div>
+                </li> -->
+            </ul>
+           
+        </div>
+    </div>
+    
+    <script src="music.js"></script>
+</body>
+</html>
