@@ -384,7 +384,7 @@ input[type="range"]::-webkit-slider-thumb:hover
 @media (max-width : 400px)
 {
     .container{
-        height: 70vh;
+        height: auto;
          width: 80vw;
     }
 }
